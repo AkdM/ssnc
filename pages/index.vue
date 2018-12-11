@@ -1,38 +1,94 @@
 <template lang="pug">
-  section.hero.is-fullheight(:class="serialStatus")
-    // Hero head: will stick at the top
-    .hero-head
-      header.navbar
-        .container
-          .navbar-brand
-            a.navbar-item
-              //- img(src='https://bulma.io/images/bulma-type-white.png', alt='Logo')
-            span.navbar-burger.burger(data-target='navbarMenuHeroC')
-              span
-              span
-              span
+  main
+    section.hero.is-fullheight#checker(:class="serialStatus")
 
-    .hero-body
-      .container.has-text-centered
-        b-field
-          b-input(
-            placeholder="Enter S/N"
-            size="is-large"
-            v-model="serialInput"
-            @input="checkSerial()"
-            maxlength=14
-          )
+      .hero-body
+        .container.has-text-centered
+          b-field
+            b-input(
+              placeholder="Enter S/N"
+              size="is-large"
+              v-model="serialInput"
+              @input="checkSerial()"
+              maxlength=14
+            )
 
-    .hero-foot
-      nav.tabs.is-boxed.is-fullwidth
+      .hero-foot
+        nav.tabs.is-boxed.is-fullwidth
+          .container
+            ul.has-text-centered
+              li.is-active
+                a(href="#checker") Serial Checker
+              li
+                a(href="#list") Serials List
+              li
+                a(href="#about")  About
+
+
+    section.hero.is-fullheight#list(:class="serialStatus")
+      .hero-body
         .container
-          ul.has-text-centered
-            li.is-active
-              a Serial Checker
-            li
-              a Serials List
-            li
-              a About
+          .pre-container
+            pre.
+              XAW4:
+              XAW4001100X and below are safe to buy
+              XAW4001200X and above not not safe, possibly patched
+              XAW4003000X and above definitely patched
+
+              XAW7:
+              XAW7001780X and below are safe to buy
+              XAW7001790X and above not safe to buy, possibly patched
+              XAW7003000X and above definitely patched
+
+              XAJ1:
+              XAJ1002000X and below are safe to buy
+              XAJ1002100X and above not safe to buy, possibly patched
+              XAJ1003000X and above definitely patched
+
+              XAJ4:
+              XAJ4004600X and below are safe to buy
+              XAJ4004700X and above not safe to buy, possibly patched
+              XAJ4006000X and above definitely patched
+
+              XAJ7:
+              XAJ7004000X and below are safe to buy
+              XAJ7004100X and above not safe to buy, possibly patched
+              XAJ7005000X and above definitely patched
+
+              XAW9:
+              Refurbished Consoles directly from Nintendo, no informations, but very possible all patched.
+
+              XAK:
+              No informations available, since those are only sold in Korea (?)
+
+
+      .hero-foot
+        nav.tabs.is-boxed.is-fullwidth
+          .container
+            ul.has-text-centered
+              li
+                a(href="#checker") Serial Checker
+              li.is-active
+                a(href="#list") Serials List
+              li
+                a(href="#about")  About
+
+    section.hero.is-fullheight#about(:class="serialStatus")
+      .hero-body
+        .container.has-text-centerd
+          h1.title Hi :)
+
+      .hero-foot
+        nav.tabs.is-boxed.is-fullwidth
+          .container
+            ul.has-text-centered
+              li
+                a(href="#checker") Serial Checker
+              li
+                a(href="#list") Serials List
+              li.is-active
+                a(href="#about")  About
+
 
 </template>
 
@@ -108,3 +164,9 @@ export default {
   }
 }
 </script>
+
+<style lang="stylus" scoped>
+  pre {
+    white-space: pre-wrap
+  }
+</style>
