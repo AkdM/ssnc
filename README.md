@@ -1,4 +1,4 @@
-# SwitchNSChecker
+# SwitchSNChecker
 
 > Switch Serial Number Checker
 
