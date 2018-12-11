@@ -6,7 +6,7 @@
         .container
           .navbar-brand
             a.navbar-item
-              img(src='https://bulma.io/images/bulma-type-white.png', alt='Logo')
+              //- img(src='https://bulma.io/images/bulma-type-white.png', alt='Logo')
             span.navbar-burger.burger(data-target='navbarMenuHeroC')
               span
               span
@@ -80,7 +80,7 @@ export default {
             let serialPart = parseInt(this.serialInput.substring(3, 10))
             let currentSerials = serials[this.serialInput.substring(0, 4)]
             for (const serial in currentSerials) {
-              if (serialPart > serial) {
+              if (serialPart > parseInt(serial)) {
                 continue
               } else {
                 this.$set(
@@ -90,6 +90,10 @@ export default {
                 )
                 break
               }
+            }
+
+            if (this.serialStatus == 'is-black') {
+              this.$set(this, 'serialStatus', 'patched')
             }
           } else {
             this.$set(this, 'serialStatus', false)
