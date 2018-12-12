@@ -149,6 +149,9 @@ export default {
       },
       get() {
         switch (this.status) {
+          case 'incorrect':
+            return 'is-info'
+
           case 'safe':
             return 'is-success'
             break
@@ -168,12 +171,15 @@ export default {
   methods: {
     checkSerial(inputSerial) {
       var status = 'is-black'
+      const digitRegex = /\D/
 
       if (inputSerial.length >= 4) {
         let firstPart = inputSerial.substring(0, 4).toUpperCase()
         let secondPart = inputSerial.substring(3, 10).toUpperCase()
         if (serials[firstPart]) {
           if (inputSerial.length >= 10) {
+            secondPart = secondPart.replace(digitRegex, '0')
+
             let serialPart = parseInt(secondPart)
             let currentSerials = serials[firstPart]
             for (const serial in currentSerials) {
@@ -189,7 +195,7 @@ export default {
               status = 'patched'
             }
           } else {
-            status = 'is-black'
+            status = 'incorrect'
           }
         } else {
           status = 'patched'
@@ -213,24 +219,10 @@ export default {
       for (const serial of splitBatch) {
         var processingSerial = serial
         if (processingSerial !== '' && processingSerial.length >= 10) {
-          if (
-            isNaN(parseInt(processingSerial.substring(9, 10).toUpperCase()))
-          ) {
-            let a = processingSerial.split('')
-            a[9] = '9'
-            processingSerial = a.join('')
-          }
-
-          if (regex.test(processingSerial.substring(3, 10))) {
-            let status = this.checkSerial(processingSerial)
-            this.batchedSerials += `<p class="${status}">${serial
-              .substring(0, 14)
-              .toUpperCase()} → ${status}</p>`
-          } else {
-            this.batchedSerials += `<p class="incorrect">${serial
-              .substring(0, 14)
-              .toUpperCase()} → incorrect</p>`
-          }
+          let status = this.checkSerial(processingSerial)
+          this.batchedSerials += `<p class="${status}">${serial
+            .substring(0, 14)
+            .toUpperCase()} → ${status}</p>`
         }
       }
     }
