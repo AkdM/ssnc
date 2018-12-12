@@ -8,8 +8,8 @@
             b-input(
               placeholder="Enter S/N"
               size="is-large"
-              v-model="serialInput"
-              @input="checkSerial()"
+              v-model="singleInput"
+              @input="singleCheck()"
               maxlength=14
             )
 
@@ -20,12 +20,43 @@
               li.is-active
                 a(href="#checker") Serial Checker
               li
+               a(href="#batch") Batch Checker
+              li
                 a(href="#list") Serials List
               li
                 a(href="#about")  About
 
 
-    section.hero.is-fullheight#list(:class="serialStatus")
+    section.hero.is-fullheight.is-info#batch
+
+      .hero-body
+        .container.has-text-centered
+          b-field
+            b-input(
+              placeholder="Enter S/N numbers, one per line"
+              v-model="batchInput"
+              @input="batchCheck()"
+              type="textarea"
+            )
+          b-field
+            pre(v-html='batchedSerials')
+
+      .hero-foot
+        nav.tabs.is-boxed.is-fullwidth
+          .container
+            ul.has-text-centered
+              li
+                a(href="#checker") Serial Checker
+
+              li.is-active
+                a(href="#batch") Batch Checker
+              li
+                a(href="#list") Serials List
+              li
+                a(href="#about")  About
+
+
+    section.hero.is-fullheight.is-info#list
       .hero-body
         .container
           .pre-container
@@ -68,12 +99,14 @@
             ul.has-text-centered
               li
                 a(href="#checker") Serial Checker
+              li
+                a(href="#batch") Batch Checker
               li.is-active
                 a(href="#list") Serials List
               li
                 a(href="#about")  About
 
-    section.hero.is-fullheight#about(:class="serialStatus")
+    section.hero.is-fullheight.is-info#about
       .hero-body
         .container.has-text-centerd
           h1.title Hi :)
@@ -84,6 +117,8 @@
             ul.has-text-centered
               li
                 a(href="#checker") Serial Checker
+              li
+                a(href="#batch") Batch Checker
               li
                 a(href="#list") Serials List
               li.is-active
@@ -101,7 +136,9 @@ export default {
   data() {
     return {
       status: false,
-      serialInput: ''
+      singleInput: '',
+      batchInput: '',
+      batchedSerials: ''
     }
   },
   computed: {
@@ -129,44 +166,99 @@ export default {
     }
   },
   methods: {
-    checkSerial() {
-      if (this.serialInput.length >= 4) {
-        if (serials[this.serialInput.substring(0, 4)]) {
-          if (this.serialInput.length >= 10) {
-            let serialPart = parseInt(this.serialInput.substring(3, 10))
-            let currentSerials = serials[this.serialInput.substring(0, 4)]
+    checkSerial(inputSerial) {
+      var status = 'is-black'
+
+      if (inputSerial.length >= 4) {
+        let firstPart = inputSerial.substring(0, 4).toUpperCase()
+        let secondPart = inputSerial.substring(3, 10).toUpperCase()
+        if (serials[firstPart]) {
+          if (inputSerial.length >= 10) {
+            let serialPart = parseInt(secondPart)
+            let currentSerials = serials[firstPart]
             for (const serial in currentSerials) {
               if (serialPart > parseInt(serial)) {
                 continue
               } else {
-                this.$set(
-                  this,
-                  'serialStatus',
-                  serials[this.serialInput.substring(0, 4)][serial]
-                )
+                status = serials[firstPart][serial]
                 break
               }
             }
 
-            if (this.serialStatus == 'is-black') {
-              this.$set(this, 'serialStatus', 'patched')
+            if (status == 'is-black') {
+              status = 'patched'
             }
           } else {
-            this.$set(this, 'serialStatus', false)
+            status = 'is-black'
           }
         } else {
-          this.$set(this, 'serialStatus', 'patched')
+          status = 'patched'
         }
       } else {
-        this.$set(this, 'serialStatus', false)
+        status = 'is-black'
+      }
+
+      return status
+    },
+
+    singleCheck() {
+      let status = this.checkSerial(this.singleInput)
+      this.$set(this, 'serialStatus', status)
+    },
+
+    batchCheck() {
+      let splitBatch = this.batchInput.split('\n')
+      this.batchedSerials = ''
+      const regex = /\d{7}/
+      for (const serial of splitBatch) {
+        var processingSerial = serial
+        if (processingSerial !== '' && processingSerial.length >= 10) {
+          if (processingSerial.substring(9, 10).toUpperCase() == 'X') {
+            let a = processingSerial.split('')
+            a[9] = '9'
+            processingSerial = a.join('')
+          }
+
+          if (regex.test(processingSerial.substring(3, 10))) {
+            let status = this.checkSerial(processingSerial)
+            this.batchedSerials += `<p class="${status}">${serial
+              .substring(0, 14)
+              .toUpperCase()}\t${status}</p>`
+          } else {
+            this.batchedSerials += `<p class="incorrect">${serial
+              .substring(0, 14)
+              .toUpperCase()}\tincorrect</p>`
+          }
+        }
       }
     }
   }
 }
 </script>
 
-<style lang="stylus" scoped>
-  pre {
-    white-space: pre-wrap
+<style lang="stylus">
+pre {
+  white-space: pre-wrap;
+}
+
+pre p {
+  font-weight: 800;
+  margin-bottom: 5px;
+
+  &.safe {
+    color: #23d160;
   }
+
+  &.warning {
+    color: #ffdd57;
+  }
+
+  &.patched {
+    color: #ff3860;
+  }
+
+  &.incorrect {
+    color: #209cee;
+  }
+}
 </style>
