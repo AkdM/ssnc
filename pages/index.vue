@@ -213,7 +213,9 @@ export default {
       for (const serial of splitBatch) {
         var processingSerial = serial
         if (processingSerial !== '' && processingSerial.length >= 10) {
-          if (processingSerial.substring(9, 10).toUpperCase() == 'X') {
+          if (
+            isNaN(parseInt(processingSerial.substring(9, 10).toUpperCase()))
+          ) {
             let a = processingSerial.split('')
             a[9] = '9'
             processingSerial = a.join('')
@@ -223,11 +225,11 @@ export default {
             let status = this.checkSerial(processingSerial)
             this.batchedSerials += `<p class="${status}">${serial
               .substring(0, 14)
-              .toUpperCase()}\t${status}</p>`
+              .toUpperCase()} → ${status}</p>`
           } else {
             this.batchedSerials += `<p class="incorrect">${serial
               .substring(0, 14)
-              .toUpperCase()}\tincorrect</p>`
+              .toUpperCase()} → incorrect</p>`
           }
         }
       }
