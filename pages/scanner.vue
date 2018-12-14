@@ -8,7 +8,7 @@
       input(
         type="file"
         accept="image/*"
-        @input="onImagesUpload($event)"
+        @change="onImagesUpload($event)"
         multiple
       )
 
