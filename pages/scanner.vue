@@ -73,12 +73,15 @@ export default {
   },
   methods: {
     decode($file) {
-      this.$set(this.configuration, 'src', $file)
-      Quagga.decodeSingle(this.configuration, function(result) {})
+      let conf = this.configuration
+      conf.src = $file
+      Quagga.decodeSingle(conf, function(result) {})
     },
     onImagesUpload($event) {
       if ($event.target.files && $event.target.files.length) {
-        this.decode(URL.createObjectURL($event.target.files[0]))
+        for (const file of $event.target.files) {
+          this.decode(URL.createObjectURL(file))
+        }
       }
     }
   }
