@@ -9,7 +9,8 @@ module.exports = {
   head: {
     title: 'SSNC',
     titleTemplate: '%s - SSNC',
-    meta: [{
+    meta: [
+      {
         charset: 'utf-8'
       },
       {
@@ -22,11 +23,13 @@ module.exports = {
         content: pkg.description
       }
     ],
-    link: [{
-      rel: 'icon',
-      type: 'image/x-icon',
-      href: '/favicon.ico'
-    }]
+    link: [
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon.ico'
+      }
+    ]
   },
 
   /*
@@ -44,9 +47,7 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [
-    '~/plugins/serial-checker'
-  ],
+  plugins: ['~/plugins/serial-checker'],
 
   /*
    ** Nuxt.js modules
@@ -85,7 +86,8 @@ module.exports = {
    */
   router: {
     base: '/ssnc/',
-    routes: [{
+    routes: [
+      {
         name: 'checker',
         path: `/`,
         component: 'pages/index.vue'
