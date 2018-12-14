@@ -1,5 +1,5 @@
 {
-  "name": "SwitchSNChecker",
+  "name": "ssnc",
   "version": "1.0.0",
   "description": "Switch Serial Number Checker",
   "author": "AkdM",
@@ -15,8 +15,8 @@
   "dependencies": {
     "cross-env": "^5.2.0",
     "nuxt": "^2.0.0",
-    "nuxt-buefy": "^0.2.1",
-    "lodash": "^4.17.11"
+    "nes.css": "^0.0.2",
+    "quagga": "^0.12.1"
   },
   "devDependencies": {
     "nodemon": "^1.11.0",

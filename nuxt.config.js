@@ -1,13 +1,14 @@
 const pkg = require('./package')
 
 module.exports = {
-  mode: 'spa',
+  mode: 'universal',
 
   /*
    ** Headers of the page
    */
   head: {
-    title: pkg.name,
+    title: 'SSNC',
+    titleTemplate: '%s - SSNC',
     meta: [{
         charset: 'utf-8'
       },
@@ -32,7 +33,7 @@ module.exports = {
    ** Customize the progress-bar color
    */
   loading: {
-    color: '#fff'
+    color: '#000'
   },
 
   /*
@@ -43,15 +44,14 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+    '~/plugins/serial-checker'
+  ],
 
   /*
    ** Nuxt.js modules
    */
-  modules: [
-    // Doc: https://buefy.github.io/#/documentation
-    'nuxt-buefy'
-  ],
+  modules: [],
 
   /*
    ** Build configuration
@@ -80,7 +80,26 @@ module.exports = {
     dir: 'docs'
   },
 
+  /*
+   ** Router configuration
+   */
   router: {
-    base: '/ssnc/'
+    base: '/ssnc/',
+    routes: [{
+        name: 'checker',
+        path: `/`,
+        component: 'pages/index.vue'
+      },
+      {
+        name: 'checker',
+        path: `/checker`,
+        component: 'pages/index.vue'
+      },
+      {
+        name: 'scanner',
+        path: `/scanner`,
+        component: 'pages/scanner.vue'
+      }
+    ]
   }
 }

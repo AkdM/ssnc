@@ -79,3 +79,6 @@ dist
 
 # IDE
 .idea
+
+# OS files
+.DS_Store

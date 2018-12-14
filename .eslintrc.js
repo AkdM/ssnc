@@ -5,7 +5,8 @@ module.exports = {
     node: true
   },
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: 'babel-eslint',
+    ecmaVersion: 6
   },
   extends: [
     'plugin:vue/recommended',
@@ -18,6 +19,7 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
+    'semi': ['error', 'never'],
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
   }
