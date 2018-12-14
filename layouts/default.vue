@@ -6,7 +6,7 @@
         span &nbsp;SSNC
       p Switch SN Checker
     main
-      section.container.with-title.is-mobile-centered
+      section.container.with-title.is-mobile-centered.categories
         h2.title Categories
         section
           label
@@ -52,6 +52,10 @@ body {
   input, textarea {
     &:focus {
       outline: none
+    }
+
+    &[type="radio"] {
+      display: none
     }
   }
 
@@ -128,6 +132,18 @@ body {
   opacity: 0;
 }
 
+@media (min-width : 900px) {
+  body {
+    section {
+      &.categories {
+        label {
+          margin-left: 30px
+        }
+      }
+    }
+  }
+}
+
 @media (max-width : 900px) {
   body {
     padding: 0
@@ -137,10 +153,6 @@ body {
         text-align: center
         label, .btn {
           width: 100%
-        }
-        .radio:checked + span::before {
-          top: 37px
-          left: calc(-100% - 35px)
         }
       }
     }
