@@ -8,7 +8,6 @@
       input(
         type="file"
         accept="image/*"
-        capture="camera"
         @input="onImagesUpload($event)"
         multiple
       )
