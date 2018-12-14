@@ -51,36 +51,50 @@ export default {
       }
     }
   },
-  mounted() {
-    Quagga.onDetected(result => {
-      let detectedSerial = result.codeResult.code
-      if (detectedSerial) {
-        let serialStatus = this.checkedSerialsOutput
-        this.checkedSerials.push(detectedSerial)
-
-        let status = this.$serialChecker(detectedSerial)
-        serialStatus =
-          `
-            <tr class='${status}'>
-              <td>${detectedSerial.substring(0, 14).toUpperCase()}</td>
-              <td>${status}</td>
-            </tr>
-          ` + serialStatus
-
-        this.$set(this, 'checkedSerialsOutput', serialStatus)
-      }
-    })
-  },
   methods: {
     decode($file) {
-      let conf = this.configuration
-      conf.src = $file
-      Quagga.decodeSingle(conf, function(result) {})
+      return new Promise((resolve, reject) => {
+        let conf = this.configuration
+        conf.src = $file
+        Quagga.decodeSingle(conf, result => {
+          if (result && result.codeResult) {
+            let detectedSerial = result.codeResult.code
+            if (detectedSerial) {
+              let serialStatus = this.checkedSerialsOutput
+              this.checkedSerials.push(detectedSerial)
+
+              let status = this.$serialChecker(detectedSerial)
+              serialStatus =
+                `
+                  <tr class='${status}'>
+                    <td>${detectedSerial.substring(0, 14).toUpperCase()}</td>
+                    <td>${status}</td>
+                  </tr>
+                ` + serialStatus
+
+              this.$set(this, 'checkedSerialsOutput', serialStatus)
+            }
+          } else {
+            let serialStatus = this.checkedSerialsOutput
+
+            serialStatus =
+              `
+                <tr>
+                  <td colspan='2'>Not detected</td>
+                </tr>
+              ` + serialStatus
+
+            this.$set(this, 'checkedSerialsOutput', serialStatus)
+          }
+
+          resolve()
+        })
+      })
     },
-    onImagesUpload($event) {
+    async onImagesUpload($event) {
       if ($event.target.files && $event.target.files.length) {
         for (const file of $event.target.files) {
-          this.decode(URL.createObjectURL(file))
+          await this.decode(URL.createObjectURL(file))
         }
       }
     }
