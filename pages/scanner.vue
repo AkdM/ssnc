@@ -3,7 +3,7 @@
     section.container.with-title
       h2.title Scanner
 
-      p Choose a file to check its serial number
+      p Choose images to check their serial numbers
 
       input(
         type="file"
