@@ -103,5 +103,9 @@ module.exports = {
         component: 'pages/scanner.vue'
       }
     ]
+  },
+
+  env: {
+    version: pkg.version
   }
 }

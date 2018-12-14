@@ -4,6 +4,7 @@
       h1
         i.nes-logo
         span &nbsp;SSNC
+        span.small v{{version}}
       p Switch SN Checker
     main
       section.container.with-title.is-mobile-centered.categories
@@ -38,6 +39,9 @@ export default {
       get() {
         return this.$route.name
       }
+    },
+    version() {
+      return process.env.version
     }
   }
 }
@@ -48,6 +52,15 @@ export default {
 body {
   padding: 0 2rem
   margin: 2rem
+
+  header {
+    h1 {
+      .small {
+        font-size: .5em
+        margin-left: 15px
+      }
+    }
+  }
 
   input, textarea {
     &:focus {
