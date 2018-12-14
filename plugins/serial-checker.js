@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import serials from 'static/serials.json'
 
-Vue.prototype.$serialChecker = (serialInput) => {
+Vue.prototype.$serialChecker = serialInput => {
   let status = null
-  const digitRegex = /\D/
+  const digitRegex = /\D/g
 
   if (serialInput.length >= 4) {
     let firstPart = serialInput.substring(0, 4).toUpperCase()
