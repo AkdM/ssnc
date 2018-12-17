@@ -48,6 +48,10 @@ ul {
     margin-left: 0;
     padding-left: 0;
   }
+  &.changes {
+    padding-left: 18px;
+    margin-top: 5px;
+  }
 
   li {
     &:before {
