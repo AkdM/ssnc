@@ -6,12 +6,12 @@
   },
   "XAW4": {
     "4001500": "safe",
-    "4001501": "warning",
+    "4001599": "warning",
     "4001600": "patched"
   },
   "XAW7": {
     "7001790": "safe",
-    "7001791": "warning",
+    "7002999": "warning",
     "7003000": "patched"
   },
   "XAJ1": {
@@ -20,12 +20,13 @@
     "1003000": "patched"
   },
   "XAJ4": {
-    "XAJ400532": "safe",
-    "XAJ400533": "patched"
+    "4005320": "safe",
+    "4005329": "warning",
+    "4005330": "patched"
   },
   "XAJ7": {
     "7005300": "safe",
-    "7005301": "warning",
+    "7005329": "warning",
     "7005330": "patched"
   },
   "XAW9": {
