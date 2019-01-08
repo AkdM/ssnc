@@ -6,6 +6,9 @@
       h3 Changelog
 
       ul.changelog
+        li.version v1.0.4
+          ul.changes
+            li.bugfix Updated XAW1; XAW4; XAW7; XAJ4; XAJ7 serials thanks to @shadow256
         li.version v1.0.3
           ul.changes
             li.bugfix Updated XAW1; XAW4; XAW7; XAJ4; XAJ7 serials
