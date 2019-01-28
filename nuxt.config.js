@@ -8,7 +8,7 @@ module.exports = {
    */
   head: {
     title: 'SSNC',
-    titleTemplate: '%s - SSNC',
+    titleTemplate: '%s - Switch Serial Number Checker (SSNC)',
     meta: [
       {
         charset: 'utf-8'

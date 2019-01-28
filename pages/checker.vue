@@ -23,8 +23,10 @@
 
 <script>
 export default {
-  head: {
-    title: 'Checker'
+  head() {
+    return {
+      title: 'Checker'
+    }
   },
   data() {
     return {

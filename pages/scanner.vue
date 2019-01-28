@@ -27,8 +27,10 @@
 import Quagga from 'quagga'
 
 export default {
-  head: {
-    title: 'Scanner'
+  head() {
+    return {
+      title: 'Scanner'
+    }
   },
   data() {
     return {

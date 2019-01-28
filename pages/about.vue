@@ -32,8 +32,10 @@
 
 <script>
 export default {
-  head: {
-    title: 'About'
+  head() {
+    return {
+      title: 'About'
+    }
   },
   data() {
     return {
