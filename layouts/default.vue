@@ -1,5 +1,5 @@
 <template lang="pug">
-  section
+  section.container
     header
       h1
         i.nes-logo
@@ -7,23 +7,23 @@
         span.small v{{version}}
       p Switch SN Checker
     main
-      section.container.with-title.is-mobile-centered.categories
+      section.nes-container.with-title.is-mobile-centered.categories
         h2.title Categories
         section
           label
-            input.radio(type='radio' name='category' :checked='currentPage == "checker"')
+            input.nes-radio(type='radio' name='category' :checked='currentPage == "checker"')
             span
-              nuxt-link.btn.is-primary(to='/') Checker
+              nuxt-link.nes-btn.is-primary(to='/') Checker
 
           label
-            input.radio(type='radio' name='category' :checked='currentPage == "scanner"')
+            input.nes-radio(type='radio' name='category' :checked='currentPage == "scanner"')
             span
-              nuxt-link.btn.is-success(to='/scanner') Barcode Scanner
+              nuxt-link.nes-btn.is-success(to='/scanner') Barcode Scanner
 
           label
-            input.radio(type='radio' name='category' :checked='currentPage == "about"')
+            input.nes-radio(type='radio' name='category' :checked='currentPage == "about"')
             span
-              nuxt-link.btn.is-warning(to='/about') About
+              nuxt-link.nes-btn.is-warning(to='/about') About
 
       nuxt
     footer
@@ -49,6 +49,12 @@ export default {
 
 
 <style lang="stylus">
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+html, body, pre, code, kbd, samp {
+  font-family: "Press Start 2P"
+}
+
 body {
   padding: 0 2rem
   margin: 2rem
@@ -62,6 +68,10 @@ body {
     }
   }
 
+  .nes-container {
+    margin-top: 5px;
+  }
+
   input, textarea {
     &:focus {
       outline: none
@@ -73,7 +83,7 @@ body {
   }
 
   a {
-    &.btn {
+    &.nes-btn {
       text-decoration: none
     }
   }
@@ -85,10 +95,10 @@ body {
     }
   }
 
-  .table {
+  table {
     table-layout: fixed
-    background-color: #fff
     width: 100%;
+    border-width: 0 !important;
 
     &.is-centered th {
       text-align: center

@@ -1,6 +1,6 @@
 <template lang="pug">
   section.scanner
-    section.container.with-title
+    section.nes-container.with-title
       h2.title Scanner
 
       p Choose images to check their serial numbers
@@ -12,10 +12,12 @@
         multiple
       )
 
-    section.container.with-title(v-if='checkedSerialsOutput')
+    section.nes-container.with-title(v-if='checkedSerialsOutput')
       h2.title Checked Serials
 
-      table.table.is-bordered.is-centered
+      Caption
+
+      table.nes-table.is-bordered.is-centered
         thead
           tr
             th Serial
@@ -24,6 +26,7 @@
 </template>
 
 <script>
+import Caption from '~/components/caption'
 import Quagga from 'quagga'
 
 export default {
@@ -31,6 +34,9 @@ export default {
     return {
       title: 'Scanner'
     }
+  },
+  components: {
+    Caption
   },
   data() {
     return {

@@ -1,27 +1,30 @@
 <template lang="pug">
   section.about
-    section.container.with-title
+    section.nes-container.with-title
       h2.title About
 
       h3 Changelog
 
-      ul.changelog
+      ul.nes-list.is-disc.changelog
+        li.version v1.1.0
+          ul.nes-list.is-circle.changes
+            li Added some help so you know what the status mean. Also updated some styles :)
         li.version v1.0.4
-          ul.changes
-            li.bugfix Updated XAW1; XAW4; XAW7; XAJ4; XAJ7 serials thanks to @shadow256
+          ul.nes-list.is-circle.changes
+            li Updated XAW1; XAW4; XAW7; XAJ4; XAJ7 serials thanks to @shadow256
         li.version v1.0.3
-          ul.changes
-            li.bugfix Updated XAW1; XAW4; XAW7; XAJ4; XAJ7 serials
+          ul.nes-list.is-circle.changes
+            li Updated XAW1; XAW4; XAW7; XAJ4; XAJ7 serials
         li.version v1.0.2
-          ul.changes
-            li.bugfix Fixed XAJ4007 serial numbers
-            li.feature Added a changelog to the about page, so you can track what's going on here :)
+          ul.nes-list.is-circle.changes
+            li Fixed XAJ4007 serial numbers
+            li Added a changelog to the about page, so you can track what's going on here :)
         li.version v1.0.1
-          ul.changes
-            li.bugfix Dramatically updated the algorithm thanks to the help of the community
+          ul.nes-list.is-circle.changes
+            li Dramatically updated the algorithm thanks to the help of the community
         li.version v1.0.0
-          ul.changes
-            li.initial Initial public release with multiple SN checker and barcode scanner
+          ul.nes-list.is-circle.changes
+            li Initial public release with multiple SN checker and barcode scanner
 
       hr
 
@@ -47,50 +50,14 @@ export default {
 </script>
 
 <style lang="stylus">
-ul {
-  &.changelog, &.changes {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
+  ul.nes-list {
+    li {
+      &.version {
+        margin-bottom: 20px;
+      }
+      &:before {
+        top: 4px !important;
+      }
+    }
   }
-  &.changes {
-    padding-left: 18px;
-    margin-top: 5px;
-  }
-
-  li {
-    &:before {
-      padding-right: 10px;
-    }
-
-    &.version {
-      &:before {
-        content: '🔖';
-      }
-
-      margin-top: 25px;
-    }
-
-    &.feature {
-      &:before {
-        content: '✨';
-      }
-    }
-
-    &.bugfix {
-      &:before {
-        content: '🔧';
-      }
-    }
-
-    &.initial {
-      &:before {
-        content: '🎉';
-      }
-    }
-
-    padding-left: 1em;
-    text-indent: -1em;
-  }
-}
 </style>

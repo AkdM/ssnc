@@ -1,18 +1,21 @@
 <template lang="pug">
   section.checker
-    section.container.with-title
+    section.nes-container.with-title
       h2.title Checker
 
       p Input your serials in the text box
 
-      textarea.input(
+      textarea.nes-textarea(
         placeholder="Enter S/Ns"
         @input="batchCheck($event.target.value)"
       )
-    section.container.with-title(v-if='checkedSerials')
+
+    section.nes-container.with-title(v-if='checkedSerials')
       h2.title Checked Serials
 
-      table.table.is-bordered.is-centered
+      Caption
+
+      table.nes-table.nes-table-responsive.is-bordered.is-centered
         thead
           tr
             th Serial
@@ -22,11 +25,16 @@
 </template>
 
 <script>
+import Caption from '~/components/caption'
+
 export default {
   head() {
     return {
       title: 'Checker'
     }
+  },
+  components: {
+    Caption
   },
   data() {
     return {
