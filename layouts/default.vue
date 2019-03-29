@@ -30,8 +30,6 @@
 </template>
 
 <script>
-require('nes.css/css/nes.css')
-
 export default {
   computed: {
     currentPage: {
@@ -49,11 +47,6 @@ export default {
 
 
 <style lang="stylus">
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
-
-html, body, pre, code, kbd, samp {
-  font-family: "Press Start 2P"
-}
 
 body {
   padding: 0 2rem

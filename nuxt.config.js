@@ -42,7 +42,14 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: [],
+  css: [
+    {
+      src: 'nes.css/css/nes.css'
+    },
+    {
+      src: '@/assets/css/press-start-2p.css'
+    }
+  ],
 
   /*
    ** Plugins to load before mounting the App
