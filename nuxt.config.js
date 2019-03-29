@@ -25,9 +25,13 @@ module.exports = {
     ],
     link: [
       {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Press+Start+2P'
+      },
+      {
         rel: 'icon',
         type: 'image/x-icon',
-        href: '/favicon.ico'
+        href: 'favicon.png'
       }
     ]
   },
@@ -42,14 +46,7 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: [
-    {
-      src: 'nes.css/css/nes.css'
-    },
-    {
-      src: '@/assets/css/press-start-2p.css'
-    }
-  ],
+  css: [{ src: 'nes.css/css/nes.css' }, { src: '~/assets/styles/global.styl' }],
 
   /*
    ** Plugins to load before mounting the App
