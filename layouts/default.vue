@@ -167,7 +167,7 @@ body {
     section {
       &.is-mobile-centered {
         text-align: center
-        label, .btn {
+        label, .btn, a {
           width: 100%
         }
       }

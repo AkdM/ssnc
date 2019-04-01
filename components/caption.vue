@@ -1,15 +1,17 @@
 <template lang="pug">
   section
-    button.nes-btn.is-primary(type="button" @click="showModal()") What does it mean?
-    dialog.nes-dialog.is-rounded(ref="caption")
+    button.nes-btn(type="button" v-bind:class="{'is-primary': !dialog, 'is-success': dialog}" @click="dialog = !dialog")
+      span(v-if="!dialog") What does it mean? What can I do?
+      span(v-else) Ok thanks
+    section.nes-container.is-rounded(ref="caption" v-show="dialog")
       form(method="dialog")
-        p.title {{ modalTitle }}
         ul.nes-list.captions
           li(v-for="caption in captions" :class="caption.title")
             span.title {{caption.title}}:
             span.explanation {{caption.explanation}}
-        menu.dialog-menu
-          button.nes-btn.is-primary OK thanks!
+
+        section
+          span How to exploit it? Search things like "Switch Hack Guide" on Google. You'll find things. :)
       </form>
 </template>
 
@@ -17,7 +19,7 @@
 export default {
   data() {
     return {
-      modalTitle: 'Help',
+      dialog: false,
       captions: [
         {
           title: 'incorrect',
@@ -39,13 +41,6 @@ export default {
             'The serial number range has clearly been reported that the Nintendo Switch IS NOT vulnerable to the Fusée Gelée exploit.'
         }
       ]
-    }
-  },
-  methods: {
-    showModal() {
-      if (this.$refs.caption) {
-        this.$refs.caption.showModal()
-      }
     }
   }
 }

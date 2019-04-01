@@ -1,6 +1,6 @@
 {
   "name": "ssnc",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Switch Serial Number Checker",
   "author": "AkdM",
   "private": true,
@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "cross-env": "^5.2.0",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.5.1",
     "nes.css": "^2.1.1",
     "quagga": "^0.12.1"
   },

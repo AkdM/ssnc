@@ -6,6 +6,9 @@
       h3 Changelog
 
       ul.nes-list.is-disc.changelog
+        li.version v1.1.1
+          ul.nes-list.is-circle.changes
+            li Fixed Safari and Firefox issues
         li.version v1.1.0
           ul.nes-list.is-circle.changes
             li Added some help so you know what the status mean. Also updated some styles :)
