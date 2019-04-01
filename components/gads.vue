@@ -1,5 +1,6 @@
 <template>
-  <section class="nes-container">
+  <section class="nes-container with-title">
+    <h2 class="title">Support me</h2>
     <ins
       class="adsbygoogle"
       style="display:inline-block;width:970px;height:250px"
