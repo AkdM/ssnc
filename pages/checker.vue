@@ -3,7 +3,7 @@
     section.nes-container.with-title
       h2.title Checker
 
-      p Input your serials in the text box
+      p Input your serials in the text box (one per line)
 
       textarea.nes-textarea(
         placeholder="Enter S/Ns"
