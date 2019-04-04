@@ -24,9 +24,9 @@
             input.nes-radio(type='radio' name='category' :checked='currentPage == "about"')
             span
               nuxt-link.nes-btn.is-warning(to='/about') About
-      GoogleAds
       nuxt
     footer
+      GoogleAds
 </template>
 
 <script>
