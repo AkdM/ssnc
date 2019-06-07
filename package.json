@@ -15,7 +15,7 @@
   "dependencies": {
     "cross-env": "^5.2.0",
     "nuxt": "^2.5.1",
-    "nes.css": "^2.1.1",
+    "nes.css": "^2.2.0",
     "quagga": "^0.12.1"
   },
   "devDependencies": {
