@@ -6,6 +6,7 @@
         span &nbsp;SSNC
         span.small v{{version}}
       p Switch SN Checker
+      Amazon-Affiliate-Banner
     main
       section.nes-container.with-title.is-mobile-centered.categories
         h2.title Categories
@@ -30,11 +31,13 @@
 </template>
 
 <script>
-import GoogleAds from '~/components/gads'
+import GoogleAds from '~/components/GoogleAdsBlock'
+import AmazonAffiliateBanner from '~/components/AmazonAffiliateBanner'
 
 export default {
   components: {
-    GoogleAds
+    GoogleAds,
+    AmazonAffiliateBanner
   },
   computed: {
     currentPage: {
