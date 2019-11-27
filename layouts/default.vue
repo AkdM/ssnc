@@ -28,7 +28,7 @@
       nuxt
     footer
       GoogleAds
-      iframe(src="https://www.francestunt.org/media/news/blackfriday-ruroc/" style="width:0;height:0;border:0; border:none;")
+      //- iframe(src="https://www.francestunt.org/media/news/blackfriday-ruroc/" style="width:0;height:0;border:0; border:none;")
 </template>
 
 <script>
