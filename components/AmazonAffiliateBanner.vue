@@ -5,22 +5,22 @@
     .blink Best prices! Ending soon!
 
     //- SD Card:
-    iframe(style='width:120px;height:240px;' marginwidth='0' marginheight='0' scrolling='no' frameborder='0' src='//ws-eu.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=FR&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=damota03-21&language=fr_FR&marketplace=amazon&region=FR&placement=B073JYC4XM&asins=B073JYC4XM&linkId=0c0c5c15219a85621f153c4b893bbdbb&show_border=true&link_opens_in_new_window=true')
+    iframe(style='width:120px;height:240px;', marginwidth='0', marginheight='0', scrolling='no', frameborder='0', src='//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=damota0b-20&marketplace=amazon&region=US&placement=B073JYC4XM&asins=B073JYC4XM&linkId=af7e36813469703a379533293b326019&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff')
 
     //- USB-C cables
-    iframe(style='width:120px;height:240px;', marginwidth='0', marginheight='0', scrolling='no', frameborder='0', src='//ws-eu.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=FR&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=damota03-21&language=fr_FR&marketplace=amazon&region=FR&placement=B07CJJHVKX&asins=B07CJJHVKX&linkId=05d9d49315ceb8d66c243459a826e598&show_border=true&link_opens_in_new_window=true')
+    iframe(style='width:120px;height:240px;', marginwidth='0', marginheight='0', scrolling='no', frameborder='0', src='//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=damota0b-20&marketplace=amazon&region=US&placement=B01LNA0XCU&asins=B01LNA0XCU&linkId=e0a20e0f380862bd113ad05ab95bc245&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff')
 
-    //- USB-A to USB-C adapter
-    iframe(style='width:120px;height:240px;', marginwidth='0', marginheight='0', scrolling='no', frameborder='0', src='//ws-eu.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=FR&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=damota03-21&language=fr_FR&marketplace=amazon&region=FR&placement=B07L3Y4TKV&asins=B07L3Y4TKV&linkId=903a479ffa5d534c239f35f31b5b5b41&show_border=true&link_opens_in_new_window=true')
+    //- Switch screen protector
+    iframe(style='width:120px;height:240px;', marginwidth='0', marginheight='0', scrolling='no', frameborder='0', src='//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=damota0b-20&language=en_US&marketplace=amazon&region=US&placement=B01N3ASPNV&asins=B01N3ASPNV&linkId=baa1e2290d6afd7e2e72f5eb97b48e98&show_border=true&link_opens_in_new_window=true')
 
     //- Switch case
-    iframe(style='width:120px;height:240px;', marginwidth='0', marginheight='0', scrolling='no', frameborder='0', src='//ws-eu.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=FR&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=damota03-21&language=fr_FR&marketplace=amazon&region=FR&placement=B07VNB4SZB&asins=B07VNB4SZB&linkId=68c62a8ce330d512c75d01590ec6c369&show_border=true&link_opens_in_new_window=true')
+    iframe(style='width:120px;height:240px;', marginwidth='0', marginheight='0', scrolling='no', frameborder='0', src='//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=damota0b-20&language=en_US&marketplace=amazon&region=US&placement=B07VNB4SZB&asins=B07VNB4SZB&linkId=3d120ca8d9a22e641cbbfd08370987af&show_border=true&link_opens_in_new_window=true')
 
     //- Nintendo Switch
-    iframe(style='width:120px;height:240px;', marginwidth='0', marginheight='0', scrolling='no', frameborder='0', src='//ws-eu.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=FR&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=damota03-21&language=fr_FR&marketplace=amazon&region=FR&placement=B07WKNQ8JT&asins=B07WKNQ8JT&linkId=6e28e3aba7eab001ed25fd9978d39b49&show_border=true&link_opens_in_new_window=true')
+    iframe(style='width:120px;height:240px;', marginwidth='0', marginheight='0', scrolling='no', frameborder='0', src='//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=damota0b-20&language=en_US&marketplace=amazon&region=US&placement=B07VGRJDFY&asins=B07VGRJDFY&linkId=18495ed78df1391ab322b16bc4a3e32c&show_border=true&link_opens_in_new_window=true')
 
-    //- Fortnite clothe
-    iframe(style='width:120px;height:240px;', marginwidth='0', marginheight='0', scrolling='no', frameborder='0', src='//ws-eu.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=FR&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=damota03-21&language=fr_FR&marketplace=amazon&region=FR&placement=B07L9DH3H6&asins=B07L9DH3H6&linkId=63b635fd35a66968fc974c7b03f433e3&show_border=true&link_opens_in_new_window=true')
+    //- Joy-Cons
+    iframe(style='width:120px;height:240px;', marginwidth='0', marginheight='0', scrolling='no', frameborder='0', src='//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=damota0b-20&marketplace=amazon&region=US&placement=B078GZM4H8&asins=B078GZM4H8&linkId=3285c4d2ed7e94acdcfef67c12124520&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff')
 
     .blink Best prices! Ending soon!
 
