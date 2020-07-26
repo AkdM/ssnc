@@ -6,6 +6,9 @@
       h3 Changelog
 
       ul.nes-list.is-disc.changelog
+        li.version v1.2.0
+          ul.nes-list.is-circle.changes
+            li Updated database with Mariko serials algorithm
         li.version v1.1.1
           ul.nes-list.is-circle.changes
             li Fixed Safari and Firefox issues
