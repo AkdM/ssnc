@@ -29,7 +29,7 @@
     "prettier": "1.14.3",
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0",
-    "stylus": "^0.54.5",
+    "stylus": "^0.54.8",
     "stylus-loader": "^3.0.2"
   }
 }
