@@ -14,7 +14,7 @@
           label
             input.nes-radio(type='radio' name='category' :checked='currentPage == "checker"')
             span
-              nuxt-link.nes-btn.is-primary(to='/') Checker
+              nuxt-link.nes-btn.is-primary(to='/checker') Checker
 
           label
             input.nes-radio(type='radio' name='category' :checked='currentPage == "scanner"')

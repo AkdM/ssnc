@@ -62,8 +62,9 @@ module.exports = {
   /*
    ** Nuxt.js modules
    */
-  modules: [],
+   modules: [],
 
+  //for multilanguage see - Multilanguage
   /*
    ** Build configuration
    */
@@ -105,7 +106,7 @@ module.exports = {
       {
         name: 'checker',
         path: `/checker`,
-        component: 'pages/index.vue'
+        component: 'pages/checker.vue'
       },
       {
         name: 'scanner',
