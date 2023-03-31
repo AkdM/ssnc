@@ -23,12 +23,6 @@ module.exports = {
         content: pkg.description
       }
     ],
-    script: [
-      {
-        src: '//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
-        defer: true
-      }
-    ],
     link: [
       {
         rel: 'stylesheet',
@@ -65,7 +59,7 @@ module.exports = {
   /*
    ** Nuxt.js modules
    */
-   modules: [],
+  modules: [],
 
   //for multilanguage see - Multilanguage
   /*
