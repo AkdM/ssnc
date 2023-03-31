@@ -57,7 +57,10 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [{ src: '~/plugins/serial-checker', mode: 'client' }],
+  plugins: [
+    { src: '~/plugins/serial-checker', mode: 'client' },
+    { src: '~/plugins/gtag', mode: 'client' },
+  ],
 
   /*
    ** Nuxt.js modules
