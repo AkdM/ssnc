@@ -54,6 +54,7 @@ module.exports = {
   plugins: [
     { src: '~/plugins/serial-checker', mode: 'client' },
     { src: '~/plugins/gtag', mode: 'client' },
+    { src: '~/plugins/cookie-consent', mode: 'client' },
   ],
 
   /*

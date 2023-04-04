@@ -32,7 +32,6 @@
 </template>
 
 <script>
-import { bootstrap } from 'vue-gtag'
 import GoogleAds from '~/components/GoogleAdsBlock'
 
 export default {
@@ -49,16 +48,6 @@ export default {
     version() {
       return process.env.version
     }
-  },
-  mounted() {
-    let checkConsent = setInterval(() => {
-      if (document.cookie.indexOf('__gads=') !== -1) {
-        bootstrap().then(gtag => {
-          console.info('Consent given. Thanks!')
-        })
-        clearInterval(checkConsent)
-      }
-    }, 1000)
   }
 }
 </script>

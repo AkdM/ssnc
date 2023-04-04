@@ -17,6 +17,7 @@
     "nes.css": "2.1.1",
     "nuxt": "2.16.3",
     "quagga": "^0.12.1",
+    "vanilla-cookieconsent": "^2.8.9",
     "vue-gtag": "^1.16.1"
   },
   "devDependencies": {
