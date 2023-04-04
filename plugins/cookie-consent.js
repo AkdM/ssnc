@@ -1,7 +1,6 @@
 // prettier-ignore
 import 'vanilla-cookieconsent/dist/cookieconsent.css'
 import 'vanilla-cookieconsent/src/cookieconsent.js'
-import { bootstrap } from 'vue-gtag'
 
 const cookieConsentPlugin = () => {
   const cookieConsent = window.initCookieConsent()
@@ -22,9 +21,6 @@ const cookieConsentPlugin = () => {
         layout: 'box',
         transition: 'slide'
       }
-    },
-    onAccept: userPreferences => {
-      if (userPreferences.categories.includes('analytics')) bootstrap()
     },
     languages: {
       en: {
