@@ -26,8 +26,10 @@ const cookieConsentPlugin = () => {
       en: {
         consent_modal: {
           title: 'Mmmmh, cookies 🍪',
-          description:
-            'Hi, this website uses essential cookies to ensure its proper operation and tracking cookies to understand how you interact with it. The latter will be set only after consent. <button type="button" data-cc="c-settings" class="cc-link">Let me choose</button>',
+          description: `
+            Hi, cookies are used for ads personalisation on this website. Some of them are essential to ensure its proper operation and others like tracking cookies are meant to understand how you interact with it. The latter will be set only after consent.<br><br>
+            For more details relative to cookies and other sensitive data, please read our full <a target="_blank" href="https://gist.github.com/AkdM/5a2bfac3dc3c07ed207337443ed70ebf#file-privacypolicy-md" class="cc-link">privacy policy</a>. You can also access <a target="_blank" href="https://policies.google.com/technologies/partner-sites" class="cc-link">Google's Privacy & Terms site here</a>.
+            `,
           primary_btn: {
             text: '✅ Accept all',
             role: 'accept_all'
@@ -52,8 +54,9 @@ const cookieConsentPlugin = () => {
           blocks: [
             {
               title: 'Cookie usage 📢',
-              description:
-                'I use cookies to ensure the basic functionalities of the website and to enhance your online experience. You can choose for each category to opt-in/out whenever you want. For more details relative to cookies and other sensitive data, please read the full <a target="_blank" href="https://gist.github.com/AkdM/5a2bfac3dc3c07ed207337443ed70ebf#file-privacypolicy-md" class="cc-link">privacy policy</a>.'
+              description: `
+                I use cookies to ensure the basic functionalities of the website and to enhance your online experience. You can choose for each category to opt-in/out whenever you want. For more details relative to cookies and other sensitive data, please read the full <a target="_blank" href="https://gist.github.com/AkdM/5a2bfac3dc3c07ed207337443ed70ebf#file-privacypolicy-md" class="cc-link">privacy policy</a>. You can also access <a target="_blank" href="https://policies.google.com/technologies/partner-sites" class="cc-link">Google's Privacy & Terms site here</a>.
+              `
             },
             {
               title: 'Strictly necessary cookies',
