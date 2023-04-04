@@ -1658,11 +1658,6 @@
     webpack-node-externals "^3.0.0"
     webpackbar "^5.0.2"
 
-"@nuxtjs/google-adsense@^1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/google-adsense/-/google-adsense-1.4.0.tgz#c86eedf10fa8cc9ae5e4b3bb45998bd462d9634b"
-  integrity sha512-C5PfE/IE/VhqhomZWNNbTmVIPjB2o+2iRXZA16QoPMA0n2cotfGqt1CkECTYPyFhN89beMa7ioOic9/+ESLPXg==
-
 "@nuxtjs/youch@^4.2.3":
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/@nuxtjs/youch/-/youch-4.2.3.tgz#36f8b22df5a0efaa81373109851e1d857aca6bed"

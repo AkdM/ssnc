@@ -1,6 +1,6 @@
 {
   "name": "ssnc",
-  "version": "1.2.0⁷",
+  "version": "1.2.0⁸",
   "description": "Switch Serial Number Checker",
   "author": "AkdM",
   "private": true,
@@ -13,12 +13,10 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "@nuxtjs/google-adsense": "^1.4.0",
     "nes.css": "2.1.1",
     "nuxt": "2.16.3",
     "quagga": "^0.12.1",
-    "vanilla-cookieconsent": "^2.8.9",
-    "vue-gtag": "^1.16.1"
+    "vanilla-cookieconsent": "^2.8.9"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
